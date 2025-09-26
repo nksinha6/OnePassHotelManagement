@@ -1,0 +1,145 @@
+/* src/pages/FinalSummary.css */
+
+.final-summary-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.summary-card {
+  background: #fff;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.header {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.subheader {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.alert-box {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.alert-mismatch {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.alert-mismatch p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #555;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.primary-button {
+  background-color: #1b3635;
+  color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+  background-color: #1b3635;
+}
+
+.primary-button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.secondary-button:hover {
+  background-color: #dc3545;
+}
+
+.blinking-circle {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.yellow {
+  background: #FFD600;
+  animation: blink 1s infinite;
+}
+
+.green {
+  background: #4CAF50;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.resend-link {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+}

@@ -1,0 +1,144 @@
+/* src/pages/FaceCapture.css */
+
+.face-capture-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.face-capture-card {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.header {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.subheader {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.camera-area {
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.webcam-container {
+  width: 100%;
+  height: 100%;
+}
+
+.webcam-feed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video fills the container without distortion */
+}
+
+.captured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.status-display {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #6c757d;
+}
+
+.status-processing {
+  color: #ffc107;
+}
+
+.status-success {
+  color: #28a745;
+}
+
+.status-failed {
+  color: #dc3545;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.primary-button, .secondary-button, .fallback-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.primary-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary-button:hover {
+  background-color: #5a6268;
+}
+
+.fallback-button {
+  background-color: #e8e8e8;
+  color: #333;
+}
+.fallback-button:hover {
+  background-color: #d4d4d4;
+}
+
+.webcam-container {
+  position: relative;
+  display: inline-block;
+}
+
+.webcam-feed {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.face-guide-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border: 5px solid limegreen;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* so clicks pass through */
+}
+

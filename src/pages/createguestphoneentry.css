@@ -1,0 +1,300 @@
+.success-animation {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .checkmark {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4CAF50;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4CAF50;
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
+
+  .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4CAF50;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke: #ffffff;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 50px #4CAF50;
+  }
+}
+
+@keyframes fill-error {
+  100% {
+    box-shadow: inset 0px 0px 0px 50px #f44336;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  } }
+
+  @keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+.sideSpace {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .loginForm {
+    .form-control {
+      width: 2.5rem !important;
+      height: 2.5rem !important;
+    }
+  }
+  .success-animation, .error-animation {
+    width: 80px;
+    height: 80px;
+  } }
+/* ==== Table Container ==== */
+.guest-table-container {
+  padding: 10px;
+  border-radius: 10px;
+
+  /* NEW: restrict height & scroll only inside */
+  max-height: 300px; /* approx 5 rows height */
+  overflow-y: auto;
+
+  /* Prevent horizontal scroll outside */
+  overflow-x: hidden;
+}
+
+/* ==== Table ==== */
+.guest-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.guest-table thead {
+  color: #1b3635;
+}
+
+.guest-table th {
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.guest-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.guest-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.guest-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* ==== Inputs & Buttons ==== */
+.phone-input {
+  width: 50%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.phone-input:focus {
+  outline: none;
+  border-color: #1b3635;
+  box-shadow: 0 0 0 2px rgba(27, 54, 53, 0.15);
+}
+
+.verify-button {
+  padding: 8px;
+  background: #1b3635;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 20px;
+}
+
+.verify-button:hover:not(:disabled) {
+  background: #234d4b;
+}
+
+.verify-button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+/* ==== Verified Phone & Links ==== */
+.verified-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.change-link,
+.details-link,
+.resend-link {
+  font-size: 13px;
+  color: #0077cc;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.change-link:hover,
+.details-link:hover,
+.resend-link:hover {
+  color: #005fa3;
+}
+
+/* ==== Status Indicators ==== */
+.aadhaar-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.yellow-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: gold;
+}
+
+.verified-text {
+  font-weight: 600;
+  color: #1b3635;
+  display: inline-block;
+  padding: 4px 10px;
+  background: #e8f5e9;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* ==== Bottom Button Group ==== */
+.button-group-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+.cancel-button,
+.submit-button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancel-button {
+  background: #c0392b;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background: #a93226;
+}
+
+.submit-button {
+  background: #1b3635;
+  color: #fff;
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #234d4b;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .guest-table th,
+  .guest-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .verify-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone-input {
+    width: 100%;
+  }
+}

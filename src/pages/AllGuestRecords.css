@@ -1,0 +1,145 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "calt";
+}
+.custom-table-wrapper {
+  border-top: 1px solid #ddd; /* outer border */
+  overflow: hidden; /* ensures header fits inside border */
+}
+
+/* Modern pill-style buttons */
+.pill-btn {
+  align-items: center;
+  background-color: initial;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #1b3635;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  height: 35px;
+  padding: 6px 11px;
+  text-align: start;
+  transition: all 0.2s ease;
+}
+.pill-btn:hover {
+  border: 1px solid #1b3635;
+  background-color: none !important;
+}
+
+/* Table styles */
+.guest-table th {
+  font-size: 12px !important;
+  font-weight: 700;
+  padding: 12px 8px !important;
+}
+.guest-table td {
+  font-size: 14px;
+  color: #444;
+  padding: 12px 8px !important;
+  vertical-align: middle;
+}
+.guest-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+.guest-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* Status dot styling */
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.status-dot.green {
+  background-color: green;
+}
+.status-dot.red {
+  background-color: red;
+}
+
+/**/
+
+.status-btn-group {
+  gap: 10px; /* spacing between buttons */
+}
+
+.status-btn {
+  background-color: initial;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #1b3635;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  height: 42px;
+  padding: 9px 11px;
+  text-align: start;
+  transition: all 0.2s ease;
+  width: 199px;
+}
+
+.status-btn:hover {
+  border: 1px solid #1b3635;
+}
+
+.status-btn.active {
+  border: 1px solid #1b3635;
+  font-weight: 400;
+}
+
+/* Guest Model Card  */
+
+.guest-profile-card {
+  background: #f6f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.profile-header {
+  background: #f9fafb;
+  border-radius: 6px;
+  margin: 24px 24px 0px;
+}
+
+.avatar-circle {
+  width: 90px; /* increased size */
+  height: 90px; /* increased size */
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.guest-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.info-section p {
+  margin: 0 0 6px;
+  font-weight: 00 !important;
+}
+.card-body p {
+  margin: 0 0 10px !important;
+}
+.modal-content {
+  border: none !important;
+  border-radius: 10px !important;
+}

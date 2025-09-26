@@ -1,0 +1,96 @@
+* {
+  font-size: 12px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif !important;
+}
+@keyframes suckOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes suckIn {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+.filter-dropdown-animate {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  transform-origin: center top; /* ✅ updated here */
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.suck-out {
+  animation-name: suckOut;
+}
+
+.suck-in {
+  animation-name: suckIn;
+}
+
+label,
+span,
+select,
+option {
+  text-transform: none !important;
+}
+
+.MuiPickersDay-root {
+  color: #333;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Change selected day */
+.MuiPickersDay-root.Mui-selected {
+  background-color: #1976d2 !important;
+  color: #fff !important;
+}
+
+/* Today’s day */
+.MuiPickersDay-root.MuiPickersDay-today {
+  border: 1px solid #1976d2;
+  background-color: #e3f2fd;
+}
+
+/* Hover effect */
+.MuiPickersDay-root:hover {
+  background-color: #f0f0f0;
+}
+
+.css-1fb7els-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer,
+.css-qru2u2-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer {
+  padding: 8.5px 0px !important;
+}
+
+.css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input,
+.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 8.5px !important;
+}
+.css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
+  line-height: 0.8em !important;
+}
+
+.css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section {
+  font-size: 14px !important;
+}
+
+.css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root {
+  padding: 0 13px !important;
+}

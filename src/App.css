@@ -1,0 +1,103 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  min-height: 100vh;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+  margin-left: 265px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.dark-mode {
+  background: #23272f !important;
+  color: #fff;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dark-mode {
+  background-color: #1e1e2f !important;
+  color: white;
+}
+
+.dark-mode .main-content {
+  background-color: #2a2a3b !important;
+}
+
+.dark-mode .nav-link {
+  color: #ccc;
+}
+
+.dark-mode .nav-link.active {
+  background-color: #444;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 250px;
+    height: 100%;
+    background: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.loginForm{
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}

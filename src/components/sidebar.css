@@ -1,0 +1,47 @@
+.nav-link {
+  color: #353a44;
+  padding: 6px 10px;
+  border-radius: 20px;
+  transition: background 0.2s ease;
+}
+
+.logo{
+  display: block;
+  border-radius: 10px;
+}
+
+.navItem{
+  padding-left: 23px;
+}
+
+.mt{
+  margin-top: 30px !important;
+  color: #596171;
+  font-size: 14px;
+}
+
+.sidebar-l1 {
+  font-size: 14px !important;
+  color: #353a44 !important;
+  font-weight: 500;
+}
+
+.sidebar-l2 {
+  font-size: 14px !important;
+  color: #353a44 !important;
+  text-wrap: nowrap;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+  color: #1b3631;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #007bff !important;
+}
+
+.GuestsSubRecords {
+  margin-left: 28px !important;
+}
