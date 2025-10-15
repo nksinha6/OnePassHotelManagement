@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Button, Form, InputGroup, Dropdown } from "react-bootstrap";
 import { useAuth } from "../context/AuthContext";
-import { BsBell, BsQuestionCircle, BsGear, BsPerson, BsBoxArrowRight, BsSearch } from "react-icons/bs";
+import {
+  BsBell,
+  BsQuestionCircle,
+  BsGear,
+  BsPerson,
+  BsBoxArrowRight,
+  BsSearch,
+} from "react-icons/bs";
 import "./header.css";
 
 import { useNavigate } from "react-router-dom";
-
 
 const Header = ({ onSidebarToggle }) => {
   const { role, logout, user } = useAuth();
@@ -42,10 +48,7 @@ const Header = ({ onSidebarToggle }) => {
           <InputGroup.Text className="search-icon-bg">
             <BsSearch size={14} color="rgb(73, 73, 75)" />
           </InputGroup.Text>
-          <Form.Control
-            placeholder="Search"
-            className="search-input-custom"
-          />
+          <Form.Control placeholder="Search" className="search-input-custom" />
         </InputGroup>
       </div>
 
@@ -56,15 +59,15 @@ const Header = ({ onSidebarToggle }) => {
           <BsUiChecksGrid  size={20} />
         </button>
         </div> */}
-        <div className="button_icons"> 
-        <button title="Help">
-          <BsQuestionCircle size={20} />
-        </button>
+        <div className="button_icons">
+          <button title="Help">
+            <BsQuestionCircle size={20} />
+          </button>
         </div>
         <div className="button_icons">
-        <button title="Notifications">
-          <BsBell size={20} />
-        </button>
+          <button title="Notifications">
+            <BsBell size={20} />
+          </button>
         </div>
 
         <Dropdown align="end" show={showDropdown} onToggle={setShowDropdown}>
@@ -74,9 +77,14 @@ const Header = ({ onSidebarToggle }) => {
             className="user-plus-toggle"
             title="User Menu"
             onClick={() => setShowDropdown(!showDropdown)}
-            style={{ border: 'none', boxShadow: 'none', background: 'transparent', padding: 0 }}
+            style={{
+              border: "none",
+              boxShadow: "none",
+              background: "transparent",
+              padding: 0,
+            }}
             id="user-menu-toggle"
-            children={<BsPerson   size={22} />}
+            children={<BsPerson size={22} />}
             bsPrefix="btn"
           />
           <Dropdown.Menu
@@ -92,10 +100,10 @@ const Header = ({ onSidebarToggle }) => {
                 {(user && user.charAt(0).toUpperCase()) || "U"}
               </div>
               <div className="fw-bold mt-2 text-capitalize">
-                {user || "Name"}
+                {(user && user.username) || "Name"}
               </div>
               <div className="fw-bold mt-2 text-capitalize">
-                {role || "Unit Admin"}
+                {(role && role.username) || "Unit Admin"}
               </div>
             </div>
             <hr />

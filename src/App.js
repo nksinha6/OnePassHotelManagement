@@ -8,6 +8,7 @@ import "./App.css";
 import CreateGuestPhoneEntry from "./pages/CreateGuestPhoneEntry";
 import CreateReservationEntry from "./pages/CreateReservationEntry";
 import MisReport from "./pages/AllGuestRecords";
+import GetData from "./pages/GetData";
 
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Login = lazy(() => import("./pages/Login"));
@@ -48,14 +49,9 @@ const MainLayout = () => {
               path="/guest-phone-entry"
               element={<CreateGuestPhoneEntry />}
             />
-            <Route
-              path="/mis-report"
-              element={<MisReport />}
-            />
-            <Route
-              path="/filtered-mis-report"
-              element={<Filter />}
-            />
+            <Route path="/mis-report" element={<MisReport />} />
+            <Route path="/filtered-mis-report" element={<Filter />} />
+            <Route path="/getdata" element={<GetData />} />
             {/* <Route path="/aadhaar-verification" element={<AadhaarVerificationStatus />} /> */}
             {/* <Route path="/face-capture" element={<FaceCapture />} /> */}
             {/* <Route path="/dependent-linking" element={<DependentLinking />} /> */}
